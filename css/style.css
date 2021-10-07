@@ -1,0 +1,215 @@
+:root {
+  --colorDarkMagenta: hsl(300, 43%, 22%);
+  --colorSoftPink: hsl(333, 80%, 67%);
+  --colorDarkGrayishMagenta: hsl(303, 10%, 53%);
+  --colorLightGrayishMagenta: hsl(300, 24%, 96%);
+  --colorWhite: hsl(0, 0%, 100%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+@media screen and (min-width: 2560px) {
+  html {
+    font-size: 28px;
+  }
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 0.9375rem;
+  font-family: "Spartan", sans-serif;
+  margin: 0;
+  display: grid;
+  grid: repeat(3, auto) / 1fr;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 1440px) {
+  body {
+    grid: repeat(2, 1fr) / repeat(2, auto);
+    grid-template-areas: "title star" "card card";
+    padding: 3.125rem;
+  }
+}
+/* title y sub title */
+@media screen and (min-width: 1440px) {
+  .contentText {
+    width: 100%;
+    height: 100%;
+    grid-area: title;
+  }
+}
+.title {
+  padding: 0 4.375rem;
+  color: var(--colorDarkMagenta);
+  margin-top: 3.75rem;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 1440px) {
+  .contentTextDesktop {
+    width: 90%;
+    height: 100%;
+  }
+  .title {
+    margin-left: 6.25rem;
+    margin-bottom: 0;
+    font-size: 2.1875rem;
+    text-align: left;
+  }
+}
+.text {
+  width: 20rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: auto;
+  color: var(--colorDarkGrayishMagenta);
+  text-align: center;
+}
+@media screen and (min-width: 1440px) {
+  .text {
+    margin-left: 10.625rem;
+    margin-top:0.625rem;
+    margin-bottom: 0.625rem;
+    text-align: left;
+  }
+}
+/* content star */
+@media screen and (min-width: 1440px) {
+  .contentStars {
+    display: flex;
+    align-items: flex-end;
+    grid-area: star;
+  }
+}
+.star {
+  width: 20rem;
+  padding: 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.625rem;
+  border-radius: 0.3125rem;
+  background-color: var(--colorLightGrayishMagenta);
+}
+@media screen and (min-width: 1440px) {
+  .star{
+  width: 28.125rem;
+margin-right: 9.375rem;
+flex-direction: row;
+justify-content: space-evenly;
+  }
+.star:nth-child(1){
+margin-right: 15.625rem;
+}
+.star:nth-child(2){
+  margin-right: 12.5rem;
+  }
+  .star:nth-child(3){
+    margin-right: 9.375rem;
+    }
+}
+.star__imgStar {
+  width: 1.0625rem;
+  height: 1rem;
+  margin-left: 0.3125rem;
+  margin-right: auto;
+}
+.star__text {
+  font-size: 0.9375rem;
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+/* cards */
+.contentCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 1440px) {
+  footer {
+    grid-area: card;
+    width: 100%;
+    height: 100%;
+  }
+  .contentCard {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+
+    flex-direction: row;
+  }
+}
+.card {
+  width: 20rem;
+  height: 12.5rem;
+  border-radius: 0.3125rem;
+  padding: 1.5625rem;
+  margin-bottom: 0.625rem;
+  background-color: var(--colorDarkMagenta);
+}
+@media screen and (min-width: 1440px) {
+  .card:nth-child(1) {
+    margin-bottom: 3.125rem;
+  }
+  .card:nth-child(2) {
+    margin-bottom: 1.5625rem;
+  }
+  .card:nth-child(3) {
+    margin-bottom: 0;
+  }
+}
+
+.card__header {
+  width: 100%;
+  height: 3.125rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.card__contentImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card__img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.card__contentTitle {
+  position: absolute;
+  top: 0;
+  left: 3.75rem;
+}
+.card__title {
+  font-size: 0.8125rem;
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+  color: var(--colorWhite);
+  font-weight: 500;
+}
+.card__subTitle {
+  font-size: 0.8125rem;
+  margin: 0;
+  color: var(--colorSoftPink);
+}
+.card__mainCite {
+  width: 100%;
+  height: 100%;
+  font-size: 0.8125rem;
+  color: var(--colorWhite);
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
